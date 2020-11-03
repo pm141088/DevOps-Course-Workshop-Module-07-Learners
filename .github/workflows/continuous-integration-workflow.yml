@@ -9,11 +9,8 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Builds the C# code.       # Name of step
-      run: dotnet build # Command to run
-
-    - name: Build the typescript code       # Name of step
-      run: cd DotnetTemplate.Web
-      run: npm run build # Command to run
-
-    - name: Runs the C# tests.       # Name of step
-      run: dotnet test # Command to run
+      run: |
+        dotnet build
+        cd DotnetTemplate.Web
+        npm run build 
+        dotnet test
