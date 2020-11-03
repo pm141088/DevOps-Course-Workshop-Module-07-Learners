@@ -10,7 +10,7 @@ jobs:
       uses: actions/checkout@v2 # Adds a step to checkout the repository code
 
     - name: Build C# code
-    - run: dotnet build 
+      run: dotnet build 
 
     - name: Run C# tests
-    - run: dotnet test
+      run: dotnet test
